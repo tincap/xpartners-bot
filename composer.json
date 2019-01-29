@@ -1,0 +1,20 @@
+{
+    "name": "tincap/xpartners-bot",
+    "description": "The 1xpartners bot",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "tincap",
+            "email": "tincap@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "tincap\\XpartnersBot\\": ""
+        }
+    },
+    "require": {
+        "tincap/bot": "*"
+    }
+}
