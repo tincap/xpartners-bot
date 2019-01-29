@@ -35,7 +35,36 @@ class XpartnersBot extends Bot
         $this->setUserAgent(SignatureUtils::getUserAgent());
         $this->setProxy($config['proxy_ip'], $config['proxy_auth']);
 
-        parent::__construct($config);
+        parent::__construct();
+    }
+
+    /**
+     * @return array
+     */
+    public static function getMandatoryHeaders()
+    {
+        return [
+            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Accept-Language' => 'en-US,en;q=0.8',
+            'Connection' => 'keep-alive',
+        ];
+    }
+
+    /**
+     * @return string
+     */
+    public static function getCookiesPath()
+    {
+        return __DIR__ . '/session/cookies.json';
+    }
+
+    /**
+     * @return string
+     */
+    public static function getHost()
+    {
+        return 'https://1xpartners.com';
     }
 
     /**
@@ -58,26 +87,5 @@ class XpartnersBot extends Bot
     public function generateNewLink()
     {
         return $this->marketingTools->generateLink();
-    }
-
-    /**
-     * @return array
-     */
-    public static function getMandatoryHeaders()
-    {
-        return [
-            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
-            'Accept-Language' => 'en-US,en;q=0.8',
-            'Connection' => 'keep-alive',
-        ];
-    }
-
-    /**
-     * @return string
-     */
-    public static function getCookiesPath()
-    {
-        return __DIR__ . '/session/cookies.json';
     }
 }
