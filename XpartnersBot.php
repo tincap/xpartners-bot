@@ -35,7 +35,7 @@ class XpartnersBot extends Bot
         $this->setUserAgent(SignatureUtils::getUserAgent());
         $this->setProxy($config['proxy_ip'], $config['proxy_auth']);
 
-        parent::__construct();
+        parent::__construct($config);
     }
 
     /**
