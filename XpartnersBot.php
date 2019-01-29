@@ -84,8 +84,8 @@ class XpartnersBot extends Bot
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \tincap\XpartnersBot\Exceptions\TokenException
      */
-    public function generateNewLink()
+    public function generateNewLink($subId = '')
     {
-        return $this->marketingTools->generateLink();
+        return $this->marketingTools->generateLink($subId);
     }
 }
