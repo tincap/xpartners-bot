@@ -3,7 +3,7 @@
 namespace tincap\XpartnersBot\Request;
 
 
-use tincap\Bot\helpers\ParsingHelpers;
+use tincap\Bot\Helpers\ParsingHelpers;
 use tincap\Bot\Request\RequestCollection;
 use tincap\XpartnersBot\Exceptions\LoginException;
 
