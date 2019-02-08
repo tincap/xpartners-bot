@@ -23,7 +23,7 @@ class XpartnersBot extends Bot
      */
     public function __construct($config)
     {
-        if (empty($config['username']) || empty($config['password']) || empty($config['proxy_ip']) || empty($config['proxy_auth'])) {
+        if (empty($config['username']) || empty($config['password']) || empty($config['proxy_ip']) || !isset($config['proxy_auth'])) {
             throw new ConfigException('Missing required configurations');
         }
 
